@@ -1,7 +1,7 @@
 package org.example;
 
 import java.util.Scanner;
-import java.util.Vector;
+
 
 class Student{
     String name;
