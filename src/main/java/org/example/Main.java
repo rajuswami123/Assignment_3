@@ -1,5 +1,8 @@
 package org.example;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 class Student{
     String name;
     char grade;
@@ -30,16 +33,17 @@ class Student{
 }
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Enter the student name :");
+        Logger logger=Logger.getLogger("com.api.jar");
+        logger.log(Level.INFO, () ->"Enter the student name :");
         Scanner in =new Scanner(System.in);
         String name=in.next();
-        System.out.println("Enter students grade :");
+        logger.log(Level.INFO, () ->"Enter students grade :");
         char grade=in.next().charAt(0);
-        System.out.println("Enter your previous gpa");
+        logger.log(Level.INFO, () ->"Enter your previous gpa");
         float gpa=in.nextFloat();
         Student ob=new Student(name,grade,gpa);
-        System.out.println("Enter your current Grade :");
+        logger.log(Level.INFO, () ->"Enter your current Grade :");
         String cgrade=in.next();
-        System.out.println(ob.msg(name, ob.ugpa(cgrade)));
+        logger.log(Level.INFO, () ->ob.msg(name, ob.ugpa(cgrade)));
     }
 }
