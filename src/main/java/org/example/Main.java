@@ -1,8 +1,5 @@
 package org.example;
-
 import java.util.Scanner;
-
-
 class Student{
     String name;
     char grade;
@@ -11,7 +8,6 @@ class Student{
         this.name=name;
         this.grade=grade;
         this.gpa=gpa;
-
     }
     float ugpa(String ugrade){
         if(ugrade.equals("A+") ) return  4.3F;
@@ -26,15 +22,12 @@ class Student{
         if(ugrade.equals("D+") )return 1.3F;
         if(ugrade.equals("D-") )return 0.7F;
         if(ugrade.equals("D") )return 1.0F;
-
         return 0;
     }
     String msg(String name,float x){
         return(name+ " has a" +x+ " gpa");
     }
-
 }
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("Enter the student name :");
@@ -44,11 +37,9 @@ public class Main {
         char grade=in.next().charAt(0);
         System.out.println("Enter your previous gpa");
         float gpa=in.nextFloat();
-
         Student ob=new Student(name,grade,gpa);
         System.out.println("Enter your current Grade :");
         String cgrade=in.next();
         System.out.println(ob.msg(name, ob.ugpa(cgrade)));
-
     }
 }
