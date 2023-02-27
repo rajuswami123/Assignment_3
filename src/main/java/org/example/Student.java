@@ -1,5 +1,7 @@
 package org.example;
 
+import java.lang.runtime.SwitchBootstraps;
+
 class Student {
     String name;
     char grade;
@@ -13,18 +15,19 @@ class Student {
 
     float ugpa(String ugrade) {
         if (ugrade.equals("A+")) return 4.3F;
-        if (ugrade.equals("A-")) return 3.7F;
-        if (ugrade.equals("A")) return 4.0F;
-        if (ugrade.equals("B+")) return 3.3F;
-        if (ugrade.equals("B-")) return 2.7F;
-        if (ugrade.equals("B")) return 3.0F;
-        if (ugrade.equals("C+")) return 2.3F;
-        if (ugrade.equals("C-")) return 1.7F;
-        if (ugrade.equals("C")) return 2.0F;
-        if (ugrade.equals("D+")) return 1.3F;
-        if (ugrade.equals("D-")) return 0.7F;
-        if (ugrade.equals("D")) return 1.0F;
-        return 0;
+        else if (ugrade.equals("A-")) return 3.7F;
+        else if (ugrade.equals("A")) return 4.0F;
+        else if (ugrade.equals("B+")) return 3.3F;
+        else if (ugrade.equals("B-")) return 2.7F;
+        else if (ugrade.equals("B")) return 3.0F;
+        else if (ugrade.equals("C+")) return 2.3F;
+        else if (ugrade.equals("C-")) return 1.7F;
+        else if (ugrade.equals("C")) return 2.0F;
+        else if (ugrade.equals("D+")) return 1.3F;
+        else if (ugrade.equals("D-")) return 0.7F;
+        else if (ugrade.equals("D")) return 1.0F;
+        else  return 0;
+
     }
 
     String msg(String name, float x) {
